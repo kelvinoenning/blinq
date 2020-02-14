@@ -9,7 +9,7 @@ Apache Beam is an advanced unified programming model that implement batch and st
 
 #### Dependencies
 [Gradle](https://gradle.org/) helps teams build, automate and deliver better software, faster.
-Also, you need a Java 8 version install in you system and then export java 8 to you system:
+Also, you need a Java sdk 8 version installed in your system and then export java sdk 8 to you system:
   - `export JAVA_HOME=/usr/libexec/java_home -v 1.8`
 
 #### WordCount example
