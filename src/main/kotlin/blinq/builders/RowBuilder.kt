@@ -1,7 +1,7 @@
 package blinq.builders
 
 import com.beust.klaxon.Klaxon
-import com.catalyst.aurora.models.Event
+import blinq.models.Event
 import com.google.api.services.bigquery.model.TableRow
 import org.apache.beam.sdk.transforms.DoFn
 

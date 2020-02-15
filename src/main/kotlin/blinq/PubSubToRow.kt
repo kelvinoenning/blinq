@@ -1,6 +1,5 @@
 package blinq
 
-import com.catalyst.aurora.builders.RowBuilder
 import com.google.api.services.bigquery.model.TableFieldSchema
 import com.google.api.services.bigquery.model.TableReference
 import com.google.api.services.bigquery.model.TableSchema
@@ -10,6 +9,7 @@ import org.apache.beam.sdk.io.gcp.bigquery.InsertRetryPolicy
 import org.apache.beam.sdk.io.gcp.pubsub.PubsubIO
 import org.apache.beam.sdk.options.PipelineOptionsFactory
 import org.apache.beam.sdk.transforms.ParDo
+import blinq.builders.RowBuilder
 
 object PubSubToRow {
     fun getTableSpec(): TableReference? {
