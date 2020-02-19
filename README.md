@@ -14,14 +14,14 @@ Also, you need a Java sdk 8 version installed in your system and then export jav
 
 #### WordCount example
 
-1. run `gradle run wordCount --args="--input=<INPUT_LOCATION>`
+1. run `gradle wordCount --args="--input=<INPUT_LOCATION> --output=<OUTPUT_LOCATION>`
 
 #### PubSubToRow example
 
 1. export you Google Cloud Credential
   - `export GOOGLE_APPLICATION_CREDENTIALS=<GCP_CREDENTIALS>`
 
-2. run `gradle run pubSubToRow --args="--project=<PROJECT_ID> --topic=<TOPIC> --runner=DataflowRunner --gcpTempLocation=<TMP_LOCATION>"`
+2. run `gradle pubSubToRow --args="--project=<PROJECT_ID> --topic=<TOPIC> --runner=DataflowRunner --gcpTempLocation=<TMP_LOCATION>"`
 
 ## License
 Copyright © 2020
