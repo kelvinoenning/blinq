@@ -23,5 +23,11 @@ Also, you need a Java sdk 8 version installed in your system and then export jav
 
 2. run `gradle pubSubToRow --args="--project=<PROJECT_ID> --topic=<TOPIC> --runner=DataflowRunner --gcpTempLocation=<TMP_LOCATION>"`
 
+#### PubSubToStorage example
+1. export you Google Cloud Credential
+  - `export GOOGLE_APPLICATION_CREDENTIALS=<GCP_CREDENTIALS>`
+
+2. run `gradle pubSubToStorage --args="--topic=<TOPIC> --windowSize=<WINDOW_DURATION> --runner=DataflowRunner --output=<OUTUP_LOCATION> --project=<PROJECT_ID> --jobName=<JOB_NAME>"`
+
 ## License
 Copyright © 2020
