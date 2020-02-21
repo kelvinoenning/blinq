@@ -47,6 +47,7 @@ application {
 
 ext {
     PubSubToRowClass = "blinq.PubSubToRow"
+    PubSubToStorageClass = "blinq.PubSubToStorage"
     WordCountClass = "blinq.WordCount"
 }
 
@@ -54,6 +55,12 @@ task pubSubToRow(type: JavaExec) {
     description = "Stream from Google PubSub to Bigquery row"
     classpath = sourceSets.main.runtimeClasspath
     main = PubSubToRowClass
+}
+
+task pubSubToStorage(type: JavaExec) {
+    description = "Stream from Google PubSub to Storage"
+    classpath = sourceSets.main.runtimeClasspath
+    main = PubSubToStorageClass
 }
 
 task wordCount(type: JavaExec) {
