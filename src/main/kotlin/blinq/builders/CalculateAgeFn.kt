@@ -10,7 +10,7 @@ import java.time.Period
 import java.time.format.DateTimeFormatter
 import com.beust.klaxon.*
 
-class CalculateAgeFn : DoFn<TableRow, String>() {
+class CalculateAgeFn : DoFn<TableRow, Lead>() {
     @ProcessElement
     fun processElement(context: ProcessContext ) {
         val row = context.element()
@@ -26,6 +26,7 @@ class CalculateAgeFn : DoFn<TableRow, String>() {
         val p: Period = Period.between(birthday, today)
 
         val lead = Lead(email.toString(), p.years, state.toString())
-        context.output(Klaxon().toJsonString(lead))
+        context.output(lead)
+//        context.output(Klaxon().toJsonString(lead))
     }
 }
