@@ -42,13 +42,14 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'blinq.PubSubToRow'
+    mainClassName = 'blinq.BigQueryToStorage'
 }
 
 ext {
     PubSubToRowClass = "blinq.PubSubToRow"
     PubSubToStorageClass = "blinq.PubSubToStorage"
     WordCountClass = "blinq.WordCount"
+    BigQueryToStorageClass = "blinq.BigQueryToStorage"
 }
 
 task pubSubToRow(type: JavaExec) {
@@ -67,4 +68,10 @@ task wordCount(type: JavaExec) {
     description = "Batch processing word count"
     classpath = sourceSets.main.runtimeClasspath
     main = WordCountClass
+}
+
+task bigQueryToStorage(type: JavaExec) {
+    description = "Process BQ to Storage"
+    classpath = sourceSets.main.runtimeClasspath
+    main = BigQueryToStorageClass
 }
